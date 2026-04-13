@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>STREETIFY • Latest Drops</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Same shared styles (copy from index.html) */
+    * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Manrope', sans-serif; background: #fefefe; color: #0b0b0b; line-height: 1.5; } .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; } :root { --red: #d71e1e; --black: #0f0f0f; --white: #ffffff; --offwhite: #f4f4f4; } @keyframes fadeSlide { 0% { opacity: 0; transform: translateY(16px); } 100% { opacity: 1; transform: translateY(0); } } .fade-slide { animation: fadeSlide 0.6s cubic-bezier(0.2, 0.9, 0.3, 1) forwards; } .product-card { opacity: 0; animation: fadeSlide 0.5s ease-out forwards; transition: transform 0.25s ease, box-shadow 0.3s; } .product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px -8px rgba(0,0,0,0.12); border-color: var(--red); } .navbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 24px 0; border-bottom: 2px solid var(--black); } .logo { font-family: 'Bebas Neue', cursive; font-size: 2.4rem; font-weight: 400; letter-spacing: 2px; background: var(--black); color: var(--white); padding: 8px 20px 6px 20px; text-transform: uppercase; line-height: 1; border: 2px solid var(--red); box-shadow: 5px 5px 0 var(--red); } .logo span { font-size: 0.9rem; margin-left: 8px; font-family: 'Manrope', sans-serif; font-weight: 400; opacity: 0.9; } .nav-links { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; } .nav-links a { text-decoration: none; font-family: 'Bebas Neue', cursive; font-size: 1.2rem; letter-spacing: 0.5px; color: var(--black); font-weight: 400; padding: 10px 18px; border-radius: 0px; transition: 0.15s; text-transform: uppercase; background: transparent; border: 2px solid transparent; } .nav-links a i { margin-right: 6px; color: var(--red); } .nav-links a:hover { background: var(--black); color: var(--white); border-bottom: 3px solid var(--red); } .nav-links a.active { background: var(--red); color: var(--white); border: 2px solid var(--black); } .cart-icon { background: var(--black); color: white !important; border: 2px solid var(--red); position: relative; } .cart-icon i { color: white !important; } #cartCount { background: var(--red); color: white; border-radius: 20px; padding: 2px 8px; font-size: 0.8rem; margin-left: 6px; font-family: 'Manrope', sans-serif; } @media (max-width: 720px) { .navbar { flex-direction: column; align-items: stretch; gap: 16px; } .nav-links { justify-content: center; } .nav-links a { font-size: 1rem; padding: 8px 12px; } .logo { font-size: 2rem; align-self: flex-start; } } .page-content { min-height: 70vh; padding: 36px 0 56px; } h1, h2, h3 { font-family: 'Bebas Neue', cursive; letter-spacing: 1px; text-transform: uppercase; } .btn-primary { background: var(--red); color: white; border: 3px solid var(--black); padding: 16px 24px; font-family: 'Bebas Neue', cursive; font-size: clamp(1.2rem, 5vw, 1.5rem); letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; display: inline-block; text-decoration: none; box-shadow: 6px 6px 0 var(--black); transition: 0.1s linear; font-weight: 400; text-align: center; } .btn-primary:hover { background: var(--black); box-shadow: 3px 3px 0 var(--red); transform: translate(2px, 2px); } .promo-block { background: var(--black); color: white; padding: 42px 36px; margin: 48px 0; border: 4px solid var(--red); box-shadow: 12px 12px 0 rgba(215,30,30,0.25); } .promo-block h2 { font-size: clamp(2rem, 8vw, 3.2rem); line-height: 1.1; } .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 24px; } @media (min-width: 640px) { .product-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); } } .product-card { background: var(--white); border: 3px solid var(--black); padding: 16px 12px 20px; box-shadow: 8px 8px 0 rgba(15,15,15,0.1); display: flex; flex-direction: column; cursor: pointer; } .product-card img { width: 100%; aspect-ratio: 1/1.1; object-fit: cover; border: 3px solid var(--black); margin-bottom: 12px; background: #ddd; filter: grayscale(20%); transition: filter 0.3s; } .product-name { font-family: 'Bebas Neue', cursive; font-size: clamp(1.3rem, 5vw, 1.6rem); letter-spacing: 0.5px; line-height: 1.1; text-transform: uppercase; } .product-variant { font-size: 0.9rem; color: var(--red); font-weight: 600; text-transform: uppercase; margin-top: 4px; } .product-price { font-weight: 700; margin-top: 8px; font-size: 1.3rem; color: var(--black); } .product-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; flex-wrap: wrap; gap: 8px; } .buy-btn { background: var(--black); color: white; border: 2px solid var(--red); font-family: 'Bebas Neue', cursive; font-size: 1.1rem; padding: 8px 16px; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: 0.1s; box-shadow: 3px 3px 0 var(--red); } .buy-btn:hover { background: var(--red); box-shadow: none; transform: translate(2px,2px); } .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; z-index: 1000; padding: 16px; overflow-y: auto; -webkit-overflow-scrolling: touch; } .modal-content { background: white; max-width: 700px; width: 100%; border: 5px solid var(--black); padding: 24px; position: relative; box-shadow: 20px 20px 0 var(--red); animation: fadeSlide 0.2s; margin: 20px auto; max-height: 90vh; overflow-y: auto; border-radius: 0; } .modal-close { position: sticky; top: 0; float: right; font-size: 2.8rem; cursor: pointer; color: var(--black); font-weight: bold; line-height: 1; z-index: 10; background: white; padding: 0 8px; } .modal-img { width: 100%; max-height: 350px; object-fit: cover; border: 4px solid var(--black); } .modal-details { margin-top: 20px; } .footer { border-top: 4px solid var(--red); padding: 32px 0; margin-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; font-weight: 600; text-transform: uppercase; font-family: 'Bebas Neue', cursive; } @media (max-width: 480px) { .container { padding: 0 16px; } .product-actions .buy-btn { font-size: 0.9rem; padding: 6px 12px; } .modal-content { padding: 16px; } .btn-primary { width: 100%; } }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="navbar">
+      <div class="logo">SARTREET<span>®</span></div>
+      <div class="nav-links">
+        <a href="index.html"><i class="fas fa-fire"></i> Home</a>
+        <a href="shop.html"><i class="fas fa-store"></i> Shop</a>
+        <a href="latest.html" class="active"><i class="fas fa-sparkles"></i> Drops</a>
+        <a href="services.html"><i class="fas fa-cut"></i> Services</a>
+        <a href="about.html"><i class="fas fa-skull"></i> About</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="checkout.html"><i class="fas fa-bag-shopping"></i> Checkout</a>
+        <a href="#" class="cart-icon" id="cartWidget"><i class="fas fa-cart-shopping"></i> <span id="cartCount">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="fade-slide"><h2 style="font-size: clamp(2.5rem, 10vw, 4rem);">LATEST DROPS</h2></div>
+    <div class="product-grid" id="productGridContainer"></div>
+    <div class="promo-block" style="margin-top:48px; background:var(--red);"><h2>DROP ALERT</h2><p>Mornte Liftooe restock.</p><span class="btn-primary" style="background:white; color:black;">NOTIFY</span></div>
+  </main>
+
+  <footer class="footer">
+    <div>© 2026 STREETIFY — FREE YOUR SARTREET</div>
+    <div><i class="fab fa-instagram"></i> <i class="fab fa-tiktok"></i> <i class="fab fa-x-twitter"></i></div>
+  </footer>
+</div>
+
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="modal-close" id="closeModalBtn">&times;</span>
+    <img id="modalImg" class="modal-img" src="" alt="">
+    <div class="modal-details">
+      <h2 id="modalName" style="font-size:2.5rem;"></h2>
+      <p id="modalVariant" style="color:var(--red); font-weight:600;"></p>
+      <p id="modalDesc" style="margin:12px 0;">Raw street essential. Heavyweight cotton, oversized fit.</p>
+      <p id="modalPrice" style="font-size:1.8rem; font-weight:700;"></p>
+      <div style="display:flex; flex-wrap:wrap; gap:16px; margin-top:24px;">
+        <button class="btn-primary" id="modalBuyBtn" style="flex:1;">BUY NOW</button>
+        <button class="btn-primary" id="modalAddCartBtn" style="background:black; flex:1;">ADD TO CART</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof renderProductGrid === 'function') {
+      const latest = productList.slice(4,8).concat(productList.slice(0,2)).map(p => ({...p, variant: 'NEW '+p.variant}));
+      renderProductGrid('productGridContainer', latest);
+    }
+  });
+</script>
+</body>
+</html>
